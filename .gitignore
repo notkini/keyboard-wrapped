@@ -26,3 +26,5 @@ Thumbs.db
 *.db
 *.db-wal
 *.db-shm
+
+shared/stats.json
