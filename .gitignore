@@ -43,3 +43,15 @@ Thumbs.db
 # Editor config
 # --------------------
 .vscode/
+
+# --------------------
+# React / Frontend
+# --------------------
+frontend-react/node_modules/
+frontend-react/build/
+
+# --------------------
+# Local env files
+# --------------------
+*.env
+
