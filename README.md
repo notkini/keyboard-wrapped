@@ -4,6 +4,10 @@ Keyboard Wrapped is a full stack system that tracks keyboard usage locally and g
 
 The project focuses on **system level data collection**, **analytics**, and **privacy first design**, rather than text or content logging.
 
+
+
+
+
 ---
 
 ## 🚀 Features
