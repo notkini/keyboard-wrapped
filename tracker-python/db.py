@@ -25,5 +25,11 @@ def init_db():
         ON key_events(timestamp)
     """)
 
+    cursor.execute("""
+    CREATE INDEX IF NOT EXISTS idx_key
+    ON key_events(key)
+    """)
+
+
     conn.commit()
     conn.close()
