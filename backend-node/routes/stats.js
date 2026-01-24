@@ -1,6 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const auth = require("../middleware/auth");
 
 const router = express.Router();
 
@@ -22,7 +23,7 @@ function loadStats() {
   return JSON.parse(raw);
 }
 
-router.get("/summary", (req, res) => {
+router.get("/summary", auth, (req, res) => {
   try {
     const stats = loadStats();
     res.json(stats.summary);
@@ -31,7 +32,7 @@ router.get("/summary", (req, res) => {
   }
 });
 
-router.get("/top-keys", (req, res) => {
+router.get("/top-keys", auth, (req, res) => {
   try {
     const stats = loadStats();
     res.json(stats.top_keys);
@@ -40,7 +41,7 @@ router.get("/top-keys", (req, res) => {
   }
 });
 
-router.get("/categories", (req, res) => {
+router.get("/categories", auth, (req, res) => {
   try {
     const stats = loadStats();
     res.json(stats.categories);
@@ -49,7 +50,7 @@ router.get("/categories", (req, res) => {
   }
 });
 
-router.get("/hourly", (req, res) => {
+router.get("/hourly", auth, (req, res) => {
   try {
     const stats = loadStats();
     res.json(stats.hourly);
@@ -58,7 +59,7 @@ router.get("/hourly", (req, res) => {
   }
 });
 
-router.get("/personality", (req, res) => {
+router.get("/personality", auth, (req, res) => {
   try {
     const stats = loadStats();
     res.json({ personality: stats.personality });
