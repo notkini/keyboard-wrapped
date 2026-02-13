@@ -1,4 +1,4 @@
-# Keyboard Wrapped 🎹📊
+# Keyboard Wrapped 
 
 Keyboard Wrapped is a full stack system that tracks keyboard usage locally and generates Spotify Wrapped style insights about typing behavior.
 
@@ -10,7 +10,7 @@ The project focuses on **system level data collection**, **analytics**, and **pr
 
 ---
 
-## 🚀 Features
+##  Features
 
 - Tracks keyboard key press events locally
 - Stores only key names and timestamps
